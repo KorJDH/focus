@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="FOCUS 레인 사진 placeholder">
+  <rect width="1200" height="800" fill="#0d1b2a"/>
+  <rect x="160" y="120" width="880" height="560" rx="20" fill="#f4f1de"/>
+  <rect x="220" y="180" width="760" height="420" rx="12" fill="#e07a5f"/>
+  <text x="600" y="420" text-anchor="middle" font-size="84" font-family="Arial, sans-serif" fill="#0d1b2a">FOCUS LANE</text>
+</svg>
+

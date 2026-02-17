@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="FOCUS 볼링공 랙 placeholder">
+  <rect width="1200" height="800" fill="#0d1b2a"/>
+  <rect x="180" y="220" width="840" height="80" rx="14" fill="#f4f1de"/>
+  <rect x="180" y="420" width="840" height="80" rx="14" fill="#f4f1de"/>
+  <circle cx="320" cy="360" r="90" fill="#f4a261"/>
+  <circle cx="520" cy="360" r="90" fill="#e07a5f"/>
+  <circle cx="720" cy="360" r="90" fill="#f4a261"/>
+  <circle cx="920" cy="360" r="90" fill="#e07a5f"/>
+</svg>
+

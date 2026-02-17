@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="FOCUS 단체 사진 placeholder">
+  <rect width="1200" height="800" fill="#1b263b"/>
+  <g fill="#f4f1de">
+    <circle cx="280" cy="420" r="70"/>
+    <circle cx="440" cy="380" r="70"/>
+    <circle cx="600" cy="350" r="70"/>
+    <circle cx="760" cy="380" r="70"/>
+    <circle cx="920" cy="420" r="70"/>
+  </g>
+  <text x="600" y="620" text-anchor="middle" font-size="70" font-family="Arial, sans-serif" fill="#f4a261">TEAM FOCUS</text>
+</svg>
+

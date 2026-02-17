@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="FOCUS 연습 사진 placeholder">
+  <rect width="1200" height="800" fill="#1b263b"/>
+  <circle cx="360" cy="400" r="180" fill="#f4a261"/>
+  <rect x="520" y="250" width="360" height="300" rx="24" fill="#f4f1de"/>
+  <text x="700" y="420" text-anchor="middle" font-size="64" font-family="Arial, sans-serif" fill="#1b263b">PRACTICE</text>
+</svg>
+

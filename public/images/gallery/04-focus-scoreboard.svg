@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="FOCUS 스코어보드 placeholder">
+  <rect width="1200" height="800" fill="#1b263b"/>
+  <rect x="220" y="140" width="760" height="520" rx="18" fill="#f4f1de"/>
+  <g fill="#0d1b2a">
+    <rect x="280" y="220" width="640" height="16"/>
+    <rect x="280" y="300" width="640" height="16"/>
+    <rect x="280" y="380" width="640" height="16"/>
+    <rect x="280" y="460" width="640" height="16"/>
+  </g>
+  <text x="600" y="560" text-anchor="middle" font-size="56" font-family="Arial, sans-serif" fill="#e07a5f">SCORE REVIEW</text>
+</svg>
+

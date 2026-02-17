@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="FOCUS 하이파이브 사진 placeholder">
+  <rect width="1200" height="800" fill="#0d1b2a"/>
+  <path d="M100 640 Q600 120 1100 640" stroke="#f4a261" stroke-width="40" fill="none"/>
+  <circle cx="470" cy="360" r="120" fill="#f4f1de"/>
+  <circle cx="730" cy="360" r="120" fill="#f4f1de"/>
+  <text x="600" y="610" text-anchor="middle" font-size="64" font-family="Arial, sans-serif" fill="#f4f1de">HIGH FIVE</text>
+</svg>
+
