@@ -15,6 +15,7 @@ const env = {
 
 export const siteInfo = {
   name: "FOCUS",
+  club: "Bowling Club",
   locationName: "인천 크라운 볼링센터",
   tagline: "초보환영 · 실력향상",
   description:
