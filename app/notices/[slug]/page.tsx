@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Pin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -49,13 +48,12 @@ export default async function NoticeDetailPage({ params }: { params: Promise<{ s
       {notice.images && notice.images.length > 0 && (
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {notice.images.map((src, i) => (
-            <div key={i} className="relative aspect-video overflow-hidden rounded-md">
-              <Image
+            <div key={i} className="overflow-hidden rounded-md">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={src}
                 alt={`${notice.title} 이미지 ${i + 1}`}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, 50vw"
+                className="w-full object-cover"
               />
             </div>
           ))}

@@ -22,7 +22,9 @@ function parseNotice(filename: string, fileContent: string): MarkdownNotice {
     slug,
     title: data.title ?? "제목 없음",
     summary: data.summary ?? "",
-    date: data.date ? String(data.date).slice(0, 10) : new Date().toISOString().slice(0, 10),
+    date: data.date instanceof Date
+      ? `${data.date.getUTCFullYear()}-${String(data.date.getUTCMonth() + 1).padStart(2, "0")}-${String(data.date.getUTCDate()).padStart(2, "0")}`
+      : data.date ? String(data.date).slice(0, 10) : new Date().toISOString().slice(0, 10),
     tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
     pinned: Boolean(data.pinned),
     images: Array.isArray(data.images) ? data.images.map(String) : undefined

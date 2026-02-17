@@ -1,10 +1,10 @@
 ---
 title: 23회 정기전 점수
-date: 2026-02-12
+date: "2026-02-12"
 summary: 23회 정기전 점수 입니다
 tags: [일정]
 pinned: false
-images: # 생략 가능
+images:
   - /images/notices/23_focus.png
 ---
 
