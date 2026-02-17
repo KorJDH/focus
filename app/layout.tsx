@@ -8,21 +8,23 @@ import { SiteFooter } from "@/components/layout/site-footer";
 const display = Exo_2({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["600", "700", "800"]
+  weight: ["600", "700", "800"],
 });
 
 const body = Noto_Sans_KR({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["400", "500", "700"]
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
-  title: `${siteInfo.name} | 인천 크라운 볼링센터`,
-  description: siteInfo.description
+  title: `${siteInfo.name} | 볼링 클럽(인천 크라운 볼링센터)`,
+  description: siteInfo.description,
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ko">
       <body className={`${display.variable} ${body.variable} antialiased`}>

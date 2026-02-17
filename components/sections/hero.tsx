@@ -27,7 +27,7 @@ export function HeroSection() {
         </h1>
         <div className="reveal delay-3 space-y-3">
           <h2 className="text-xl font-bold text-white/90 sm:text-3xl">
-            {siteInfo.locationName}
+            {siteInfo.club}
           </h2>
           <p className="text-base font-medium text-slate-300 sm:text-xl">
             초보환영 · 실력향상 • 즐거운 볼링 라이프
