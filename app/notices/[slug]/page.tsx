@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/button";
+import { Pin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { getNoticeBySlug, getNotices } from "@/lib/notion";
+import { getNoticeBySlug, getNotices } from "@/lib/notices";
 
 export const dynamicParams = false;
 
@@ -27,34 +28,44 @@ export default async function NoticeDetailPage({ params }: { params: Promise<{ s
 
   return (
     <article className="section-shell pt-10">
-      <h1 className="text-4xl text-primary">{notice.title}</h1>
+      <div className="flex items-center gap-2">
+        {notice.pinned && <Pin className="h-4 w-4 shrink-0 text-primary" />}
+        <h1 className="text-4xl text-primary">{notice.title}</h1>
+      </div>
       <p className="mt-2 text-sm text-muted-foreground">{formatDate(notice.date)}</p>
-      <div className="mt-3 flex flex-wrap gap-2">
-        {notice.tags.map((tag) => (
-          <Badge key={`${notice.id}-${tag}`} variant="outline">
-            {tag}
-          </Badge>
-        ))}
-      </div>
-      <div className="mt-8 space-y-4">
-        {notice.blocks.map((block) => {
-          if (block.type === "heading_2") return <h2 key={block.id} className="text-2xl">{block.text}</h2>;
-          if (block.type === "heading_3") return <h3 key={block.id} className="text-xl">{block.text}</h3>;
-          if (block.type === "bulleted_list_item") return <p key={block.id} className="pl-2 text-sm text-muted-foreground">• {block.text}</p>;
-          if (block.type === "numbered_list_item") return <p key={block.id} className="pl-2 text-sm text-muted-foreground">- {block.text}</p>;
-          if (block.type === "quote") return <blockquote key={block.id} className="border-l-2 border-primary pl-3 text-sm text-muted-foreground">{block.text}</blockquote>;
-          if (block.type === "code") return <pre key={block.id} className="overflow-x-auto rounded-md bg-secondary p-3 text-sm"><code>{block.text}</code></pre>;
-          return <p key={block.id} className="text-sm leading-relaxed text-muted-foreground">{block.text}</p>;
-        })}
-      </div>
-      {notice.notionUrl ? (
-        <div className="mt-8">
-          <Link href={notice.notionUrl} target="_blank" rel="noreferrer">
-            <Button variant="outline">Notion 원문 보기</Button>
-          </Link>
+      {notice.tags.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {notice.tags.map((tag) => (
+            <Badge key={`${notice.slug}-${tag}`} variant="outline">
+              {tag}
+            </Badge>
+          ))}
         </div>
-      ) : null}
+      )}
+      <div
+        className="notice-content mt-8"
+        dangerouslySetInnerHTML={{ __html: notice.contentHtml }}
+      />
+      {notice.images && notice.images.length > 0 && (
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {notice.images.map((src, i) => (
+            <div key={i} className="relative aspect-video overflow-hidden rounded-md">
+              <Image
+                src={src}
+                alt={`${notice.title} 이미지 ${i + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="mt-8">
+        <Link href="/notices" className="text-sm text-muted-foreground underline-offset-4 hover:underline">
+          ← 공지 목록으로
+        </Link>
+      </div>
     </article>
   );
 }
-

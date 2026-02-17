@@ -194,6 +194,54 @@ h3 {
   animation: marker-pulse 2.2s ease-in-out infinite;
 }
 
+.notice-content {
+  @apply text-sm leading-relaxed text-muted-foreground;
+}
+
+.notice-content p {
+  @apply mb-4;
+}
+
+.notice-content h2 {
+  @apply mb-3 mt-6 text-2xl text-foreground;
+}
+
+.notice-content h3 {
+  @apply mb-2 mt-5 text-xl text-foreground;
+}
+
+.notice-content ul {
+  @apply mb-4 list-disc pl-5 space-y-1;
+}
+
+.notice-content ol {
+  @apply mb-4 list-decimal pl-5 space-y-1;
+}
+
+.notice-content li {
+  @apply leading-relaxed;
+}
+
+.notice-content blockquote {
+  @apply mb-4 border-l-2 border-primary pl-3;
+}
+
+.notice-content pre {
+  @apply mb-4 overflow-x-auto rounded-md bg-secondary p-3;
+}
+
+.notice-content code {
+  @apply text-sm;
+}
+
+.notice-content strong {
+  @apply font-semibold text-foreground;
+}
+
+.notice-content a {
+  @apply text-primary underline underline-offset-4 hover:text-accent;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .header-appear,
   .reveal,
