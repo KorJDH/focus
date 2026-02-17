@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import galleryMeta from "@/content/gallery.json";
 import { GalleryItem } from "@/types/content";
+import { withBasePath } from "@/lib/utils";
 
 const galleryDir = path.join(process.cwd(), "public", "images", "gallery");
 
@@ -17,7 +18,7 @@ export async function getGalleryItems(limit?: number): Promise<GalleryItem[]> {
     const meta = galleryMeta.find((item) => item.filename === filename);
     const label = meta?.caption ?? filename.replace(/\.[^.]+$/, "");
     return {
-      src: `/images/gallery/${filename}`,
+      src: withBasePath(`/images/gallery/${filename}`),
       alt: meta?.alt ?? `FOCUS gallery image ${label}`,
       caption: meta?.caption
     };

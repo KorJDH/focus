@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
 import { MarkdownNotice, MarkdownNoticeDetail } from "@/types/notice";
+import { withBasePath } from "@/lib/utils";
 
 const noticesDir = path.join(process.cwd(), "content", "notices");
 
@@ -27,7 +28,7 @@ function parseNotice(filename: string, fileContent: string): MarkdownNotice {
       : data.date ? String(data.date).slice(0, 10) : new Date().toISOString().slice(0, 10),
     tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
     pinned: Boolean(data.pinned),
-    images: Array.isArray(data.images) ? data.images.map(String) : undefined
+    images: Array.isArray(data.images) ? data.images.map((s) => withBasePath(String(s))) : undefined
   };
 }
 
